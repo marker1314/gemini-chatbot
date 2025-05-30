@@ -1,9 +1,7 @@
 import streamlit as st
-from dotenv import load_dotenv
-import os
+from pathlib import Path
 from gemini_api import get_gemini_response
 
-load_dotenv()
 st.set_page_config(page_title="Gemini Chatbot", page_icon="💬")
 
 # 세션 히스토리 초기화
