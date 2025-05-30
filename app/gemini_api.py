@@ -8,7 +8,7 @@ def get_gemini_response(prompt):
             return "❌ API key not found. Please set GOOGLE_API_KEY in .streamlit/secrets.toml."
 
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel("gemini-pro")
+        model = genai.GenerativeModel('gemini-1.5-flash')
         response = model.generate_content(prompt)
         return response.text
 
