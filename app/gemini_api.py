@@ -1,0 +1,16 @@
+import google.generativeai as genai
+import os
+
+def get_gemini_response(prompt):
+    try:
+        api_key = os.getenv("GOOGLE_API_KEY")
+        if not api_key:
+            return "❌ API key not found. Please set GOOGLE_API_KEY in .env."
+
+        genai.configure(api_key=api_key)
+        model = genai.GenerativeModel("gemini-pro")
+        response = model.generate_content(prompt)
+        return response.text
+
+    except Exception as e:
+        return f"❌ Error: {str(e)}" 
