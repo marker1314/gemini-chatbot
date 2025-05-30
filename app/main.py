@@ -1,7 +1,7 @@
 import streamlit as st
 from dotenv import load_dotenv
 import os
-from app.gemini_api import get_gemini_response
+from gemini_api import get_gemini_response
 
 load_dotenv()
 st.set_page_config(page_title="Gemini Chatbot", page_icon="💬")
