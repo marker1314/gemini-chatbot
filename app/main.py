@@ -1,6 +1,6 @@
 import streamlit as st
-from app.ui import render_ui
-from app.gemini_api import get_gemini_response
+from ui import render_ui
+from gemini_api import get_gemini_response
 from dotenv import load_dotenv
 import os
 
